@@ -1,0 +1,647 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none; /* Prevent text selection */
+    cursor:default;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+/* Heading Styles */
+h2, h3 {
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+h2::after, h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100px; /* Length of the line */
+  height: 3px; /* Thickness of the line */
+  background: yellow; /* Color of the line */
+}
+
+/* Optional: Add a hover effect to the line */
+h2:hover::after, h3:hover::after {
+  background: #0056b3; /* Darker color on hover */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+/* Navigation Bar */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+/* Navbar container */
+nav {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 13px; 
+}
+
+
+.logo {
+  font-size: 24px; 
+  font-weight: bold;
+  margin-right: auto; 
+}
+
+/* Nav links container */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px; 
+  margin: 0;
+  padding: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); 
+}
+
+/* Nav link styling */
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav ul li a:hover {
+  color: gold;
+}
+
+/* Search container */
+.search-container {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  width: 40%;
+  z-index: 1000;
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Input field */
+.search-bar input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  width: calc(100% - 100px);
+}
+
+/* Search button */
+.search-bar button {
+  padding: 8px 12px;
+  background: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  width: 80px;
+}
+
+.search-bar button:hover {
+  background: #0056b3;
+}
+
+/* Hero Section */
+.hero {
+  height: 75vh;
+  background: url('images/hero2.avif') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Pop-Up Block */
+.popup {
+  width: 40%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(images/h1.png);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.pie-chart {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url(images/pie6.jpg);
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(330deg); }
+}
+
+.popup p {
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.register-btn {
+  padding: 10px 20px;
+  background: gold;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  background: #0056b3;
+}
+
+/* Blog Posts Section */
+.blog-posts {
+  padding: 20px;
+  width: 90%;
+  margin: auto;
+}
+
+.blog-posts h2 {
+  margin-bottom: 20px;
+}
+
+.blog-container {
+  display: flex;
+  gap: 40px;
+}
+
+.main-blog {
+  width: 70%;
+}
+
+.popular-posts {
+  width: 30%;
+}
+
+.post {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.post img {
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.post-content h3 {
+  margin-bottom: 10px;
+}
+
+.meta {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.read-more {
+  padding: 5px 10px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Popular Posts */
+.popular-posts h3 {
+  margin-bottom: 20px;
+}
+
+.popular-post {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.popular-post img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.popular-content a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.popular-content a:hover {
+  text-decoration: underline;
+}
+
+.popular-content .meta {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* FAQ Section */
+.faqs {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.faqs h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  width: 70%;
+  margin: auto;
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.faq-item h3 {
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.faq-item p {
+  color: #555;
+}
+
+/* Contact Us Section */
+.contact {
+  width: 65%;
+  left: 30px;
+  padding: 20px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact input, .contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact button {
+  padding: 10px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Footer Styles */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-section.about .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-section.about p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section.links h3,
+.footer-section.newsletter h3,
+.footer-section.social h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer-section.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section.links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section.links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-section.links ul li a:hover {
+  color: #007bff;
+}
+
+.footer-section.newsletter .subscription-form {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-section.newsletter input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  flex: 1;
+}
+
+.footer-section.newsletter button {
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer-section.newsletter button:hover {
+  background: #0056b3;
+}
+
+.footer-section.social .social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-section.social .social-icons a {
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.footer-section.social .social-icons a:hover {
+  color: #007bff;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Floating Buttons */
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.register-btn, .whatsapp-btn {
+  padding: 15px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-btn {
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.whatsapp-btn i {
+  font-size: 24px;
+}
+
+/* Hover Effects */
+.register-btn:hover, .whatsapp-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* Navigation Bar */
+  .logo {
+      display: none; /* Hide nav links on mobile */
+  }/* Adjust navigation bar for mobile */
+  nav {
+    flex-direction: column;
+    
+    padding: 10px;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+  }
+
+  /* Nav links container */
+  nav ul {
+    position: static;
+    transform: none;
+    flex-direction: row; /* Stack nav links vertically */
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  /* Nav link styling */
+  nav ul li a {
+    font-size: 16px; 
+    /* Reduce font size for mobile */
+    text-decoration: underline;
+  }
+  
+
+
+  /* Search container */
+  .search-container {
+      width: 80%; /* Make search bar wider on mobile */
+      top: 50px; /* Adjust position */
+      right: 10px;
+  }
+
+  /* Hero Section */
+  .hero {
+      height: 72vh; /* Reduce hero section height */
+  }
+
+  .hero-content h1 {
+      font-size: 2rem; /* Reduce heading size */
+  }
+
+  .hero-content p {
+      font-size: 1rem; /* Reduce paragraph size */
+  }
+
+  /* Pop-Up Block */
+  .popup {
+      width: 80%; /* Make popup wider on mobile */
+  }
+
+  .popup p {
+      font-size: 18px; 
+      margin: 0 auto;/* Reduce text size */
+  }
+
+  /* Blog Posts Section */
+  .blog-container {
+      flex-direction: column; /* Stack blog posts vertically */
+  }
+
+  .main-blog, .popular-posts {
+      width: 100%; /* Full width for blog sections */
+  }
+
+  .post {
+      flex-direction: column; /* Stack post content vertically */
+  }
+
+  .post img {
+      width: 100%; /* Full width for images */
+      height: auto;
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
+
+  /* FAQ Section */
+  .faq-item {
+      width: 90%; /* Adjust width for mobile */
+  }
+
+  /* Contact Us Section */
+  .contact {
+      width: 90%; /* Full width for contact form */
+      left: 0;
+  }
+
+  /* Footer */
+  .footer-content {
+      flex-direction: column; /* Stack footer sections vertically */
+  }
+
+  .footer-section {
+      min-width: 100%; /* Full width for footer sections */
+  }
+
+  /* Floating Buttons */
+  .floating-buttons {
+      bottom: 10px;
+      right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    gap: 5px; /* Reduce gap between links */
+  }
+
+  nav ul li a {
+    font-size: 16px; /* Further reduce font size */
+  }
+ 
+  /* Further adjustments for very small screens */
+  .hero-content h1 {
+      font-size: 1.5rem; /* Further reduce heading size */
+  }
+
+  .hero-content p {
+      font-size: 0.9rem; /* Further reduce paragraph size */
+  }
+
+  .popup p {
+      font-size: 14px;
+      margin: 0 auto; /* Further reduce text size */
+  }
+
+  .search-container {
+      width: 90%;
+      top: 65px; /* Make search bar even wider */
+  }
+}
